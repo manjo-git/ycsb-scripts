@@ -7,7 +7,7 @@ Run these scripts in the following order. After I generate the results_data_{lab
 # Generate benchmark data.
 ## test_db.sh
 You may modify this script if you are running ycsb against any other database like cassandra etc to use the right commands. In
-this example I am using mongodb. 
+this example I am using mongodb. *But please do not change the workload. These scripts will only work for ycsb worloadf. You will need to modify process_data.sh if you change the workload type in ycsb* 
 
 Copy the script test_db.sh to your client AWS instance, and run it against the mongodb server on the target. Say you ran ycsb
 against mongodb on r5.16Xlarge (Intel) r5a.16Xlarge (AMD) and r6g.16Xlarge, and you want to compare the performance matrics on 
@@ -97,14 +97,30 @@ $ ../scripts/process_data.sh ./test_output_r5
 $ ../scripts/process_data.sh ./test_output_r5a/
 $ ../scripts/process_data.sh ./test_output_r6g/
 ```
-Remember the order r5 (Intel) r5a (AMD) and r6g (ARM), you will need to use the same order in the gen_plot.sh to 
-label the graphs in the right order. 
+Remember the order of execution .. r5 (Intel) r5a (AMD) and r6g (ARM), you will need to use the same order in the gen_plot.sh to 
+label the graphs in the right order. A seperate .dat file is generated for each matric you are tracking like runtime, throughput,
+and latency for 'load' and 'run' operations. 'run' operations are 'read' read-write-modify' and 'update' becuase the workload used is workloadf. 
+
 ```
 $ ls plot
 insert_99.dat   insert_tput.dat  rmw_rmw99.dat   rmw_tput.dat
 insert_avg.dat  rmw_r99.dat      rmw_rmwavg.dat  rmw_u99.dat
 insert_rt.dat   rmw_ravg.dat     rmw_rt.dat      rmw_uavg.dat
 ```
+
+Sample dat file:
+```
+$ cat plot/insert_rt.dat 
+1	415810	739866	525057
+2	295922	476954	313804
+4	162898	277419	168817
+8	93854	161961	94037
+16	64794	107116	55852
+32	69937	101941	43724
+64	75932	106037	81173
+96	80067	125404	58721
+```
+
 # Generate Graphs
 ## gen_plot.sh
 
