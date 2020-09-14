@@ -26,6 +26,66 @@ LoadData1.txt   LoadData64.txt  RunData1.txt   RunData64.txt
 LoadData2.txt   LoadData8.txt   RunData2.txt   RunData8.txt
 LoadData32.txt  LoadData96.txt  RunData32.txt  RunData96.txt
 ```
+After you untar those results files you would end up with the following directories. 
+
+```
+$ tree
+.
+├── test_output_r5
+│   ├── LoadData16.txt
+│   ├── LoadData1.txt
+│   ├── LoadData2.txt
+│   ├── LoadData32.txt
+│   ├── LoadData4.txt
+│   ├── LoadData64.txt
+│   ├── LoadData8.txt
+│   ├── LoadData96.txt
+│   ├── RunData16.txt
+│   ├── RunData1.txt
+│   ├── RunData2.txt
+│   ├── RunData32.txt
+│   ├── RunData4.txt
+│   ├── RunData64.txt
+│   ├── RunData8.txt
+│   └── RunData96.txt
+├── test_output_r5a
+│   ├── LoadData16.txt
+│   ├── LoadData1.txt
+│   ├── LoadData2.txt
+│   ├── LoadData32.txt
+│   ├── LoadData4.txt
+│   ├── LoadData64.txt
+│   ├── LoadData8.txt
+│   ├── LoadData96.txt
+│   ├── RunData16.txt
+│   ├── RunData1.txt
+│   ├── RunData2.txt
+│   ├── RunData32.txt
+│   ├── RunData4.txt
+│   ├── RunData64.txt
+│   ├── RunData8.txt
+│   └── RunData96.txt
+└── test_output_r6g
+    ├── LoadData16.txt
+    ├── LoadData1.txt
+    ├── LoadData2.txt
+    ├── LoadData32.txt
+    ├── LoadData4.txt
+    ├── LoadData64.txt
+    ├── LoadData8.txt
+    ├── LoadData96.txt
+    ├── RunData16.txt
+    ├── RunData1.txt
+    ├── RunData2.txt
+    ├── RunData32.txt
+    ├── RunData4.txt
+    ├── RunData64.txt
+    ├── RunData8.txt
+    └── RunData96.txt
+
+3 directories, 48 files
+```
+
 # Process raw data
 ## process_data.sh
 
