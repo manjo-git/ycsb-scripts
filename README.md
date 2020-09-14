@@ -2,7 +2,7 @@
 Please note these are helper scripts I use to generate some performance data for comparing mongodb on various AWS instances. 
 The code quality is just so-so, and you are welcome to use it as you like, modify as you need. Just don't expect me to support it. 
 
-Run these scripts in the following order.
+Run these scripts in the following order. After I generate the results_data_{label}.tgz  I would scp them to your local desktop and untar them and do further processing. 
 
 # Generate benchmark data.
 ## test_db.sh
@@ -13,9 +13,11 @@ Copy the script test_db.sh to your client AWS instance, and run it against the m
 against mongodb on r5.16Xlarge (Intel) r5a.16Xlarge (AMD) and r6g.16Xlarge, and you want to compare the performance matrics on 
 each of those. 
 
-After you run the test_db script you will end up with 3 directories with raw data
+Lets say you are testing mongodb on 3 servers r5.16Xlarge, r5a.16Xlarge and r6g.16Xlarge, I would simply change the 
+"server" and "targer" variables for each of the runs and run the script. After you run the test_db script you will end up 
+with 3 tgz with raw data
 ```
-test_output_r6g test_output_r5 and test_output_r5a
+test_output_r6g.tgz  test_output_r5.tgz and test_output_r5a.tgz
 ```
 Each containing data in the following files
 ```
