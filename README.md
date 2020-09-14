@@ -7,7 +7,8 @@ Run these scripts in the following order. After I generate the results_data_{lab
 # Generate benchmark data.
 ## test_db.sh
 You may modify this script if you are running ycsb against any other database like cassandra etc to use the right commands. In
-this example I am using mongodb. *But please do not change the workload. These scripts will only work for ycsb worloadf. You will need to modify process_data.sh if you change the workload type in ycsb* 
+this example I am using mongodb. 
+NOTE: *Please do not change the ycsb workload type. These scripts will only work for ycsb workloadf. You will need to modify process_data.sh if you change the workload type in ycsb* 
 
 Copy the script test_db.sh to your client AWS instance, and run it against the mongodb server on the target. Say you ran ycsb
 against mongodb on r5.16Xlarge (Intel) r5a.16Xlarge (AMD) and r6g.16Xlarge, and you want to compare the performance matrics on 
