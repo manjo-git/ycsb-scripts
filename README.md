@@ -97,7 +97,8 @@ $ ../scripts/process_data.sh ./test_output_r5
 $ ../scripts/process_data.sh ./test_output_r5a/
 $ ../scripts/process_data.sh ./test_output_r6g/
 ```
-Remember the order r5 (Intel) r5a (AMD) and r6g (ARM)
+Remember the order r5 (Intel) r5a (AMD) and r6g (ARM), you will need to use the same order in the gen_plot.sh to 
+label the graphs in the right order. 
 ```
 $ ls plot
 insert_99.dat   insert_tput.dat  rmw_rmw99.dat   rmw_tput.dat
