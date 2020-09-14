@@ -2,6 +2,8 @@
 Please note these are helper scripts I use to generate some performance data for comparing mongodb on various AWS instances. 
 The code quality is just so-so, and you are welcome to use it as you like, modify as you need. Just don't expect me to support it. 
 
+Run these scripts in the following order.
+
 # Generate benchmark data.
 ## test_db.sh
 You may modify this script if you are running ycsb against any other database like cassandra etc to use the right commands. In
